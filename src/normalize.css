@@ -1,0 +1,108 @@
+/* normalize.css */
+/* Document
+   ========================================================================== */
+html {
+  line-height: 1.15; /* Set line-height */
+  -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+}
+
+/* Sections
+   ========================================================================== */
+body {
+  margin: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+abbr[title] {
+  border-bottom: none; /* Remove default border for abbreviations */
+  text-decoration: underline dotted; /* Apply dotted underline */
+}
+
+/* Grouping content
+   ========================================================================== */
+ol,
+ul {
+  list-style: none; /* Remove default list styles */
+}
+
+/* Tables
+   ========================================================================== */
+table {
+  border-collapse: collapse; /* Collapse borders */
+}
+
+caption {
+  text-align: left; /* Align captions to the left */
+}
+
+/* Forms
+   ========================================================================== */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit; /* Inherit font styles */
+  margin: 0; /* Reset margin */
+}
+
+button,
+select {
+  text-transform: none; /* Remove text transformations */
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  appearance: button;
+  -webkit-appearance: button; /* Use native button styles */
+}
+
+::-moz-focus-inner {
+  border-style: none; /* Remove inner border */
+  padding: 0; /* Remove padding */
+}
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText; /* Add dotted outline for focus */
+}
+
+textarea {
+  overflow: auto; /* Enable overflow */
+}
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box; /* Set box-sizing */
+  padding: 0; /* Reset padding */
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto; /* Adjust spinner buttons */
+}
+
+[type='search'] {
+  appearance: textfield;
+  -webkit-appearance: textfield; /* Use native search field styles */
+  outline-offset: -2px; /* Adjust outline offset */
+}
+
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none; /* Remove decorations */
+}
+
+/* Interactive elements
+   ========================================================================== */
+summary {
+  display: list-item; /* Set summary display */
+}
+
+/* Miscellaneous
+   ========================================================================== */
+[hidden] {
+  display: none !important; /* Hide hidden elements */
+}
