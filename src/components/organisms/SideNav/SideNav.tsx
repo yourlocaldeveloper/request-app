@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import {
   faHome,
   faEnvelope,
@@ -5,27 +6,33 @@ import {
   faShop,
   faSquareCheck,
 } from '@fortawesome/free-solid-svg-icons';
-import { NavButton } from '@components/molecules/NavButton';
+import { SideNavButton } from '@/components/molecules/SideNavButton';
 
 import styles from './SideNav.module.scss';
 
-export const SideNav: React.FC = () => {
+interface SideNavProps {
+  menuOpen: boolean;
+}
+
+export const SideNav: React.FC<SideNavProps> = (props) => {
+  const { menuOpen } = props;
+
   return (
-    <ul className={styles.conatiner}>
+    <ul className={cn({ [styles.menuOpen]: menuOpen }, styles.sideNav)}>
       <li>
-        <NavButton icon={faHome} text={'Home'} active />
+        <SideNavButton icon={faHome} text={'Home'} active />
       </li>
       <li>
-        <NavButton icon={faEnvelope} text={'Request'} />
+        <SideNavButton icon={faEnvelope} text={'Request'} />
       </li>
       <li>
-        <NavButton icon={faSquareCheck} text={'Completed Tasks'} />
+        <SideNavButton icon={faSquareCheck} text={'Completed Tasks'} />
       </li>
       <li>
-        <NavButton icon={faShop} text={'Shop'} />
+        <SideNavButton icon={faShop} text={'Shop'} />
       </li>
       <li className={styles.lastItem}>
-        <NavButton icon={faRightFromBracket} text={'Logout'} />
+        <SideNavButton icon={faRightFromBracket} text={'Logout'} />
       </li>
     </ul>
   );

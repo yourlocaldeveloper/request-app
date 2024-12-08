@@ -1,0 +1,45 @@
+.header {
+  align-items: center;
+  background-color: $primary;
+  display: flex;
+  height: 50px;
+  min-width: 100vw;
+  width: 100vw;
+}
+
+.headerContainer {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  justify-content: right;
+  width: 100%;
+
+  @include for-tablet-up {
+    padding-right: 25px;
+  }
+}
+
+.logo {
+  height: 35px;
+}
+
+.logoContainer {
+  align-items: center;
+  display: none;
+  height: 50px;
+  justify-content: center;
+  min-width: 250px;
+  width: 250px;
+
+  @include for-tablet-up {
+    display: flex;
+  }
+}
+
+.menuContainer {
+  display: block;
+
+  @include for-tablet-up {
+    display: none;
+  }
+}

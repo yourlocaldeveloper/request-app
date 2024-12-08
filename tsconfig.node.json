@@ -26,7 +26,8 @@
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@utils/*": ["src/utils/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@public/*": ["public/*"]
     }
   },
   "include": ["vite.config.ts"]

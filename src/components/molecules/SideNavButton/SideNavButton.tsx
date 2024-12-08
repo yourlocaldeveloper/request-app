@@ -2,28 +2,28 @@ import cn from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-import styles from './NavButton.module.scss';
+import styles from './SideNavButton.module.scss';
 
-interface NavButtonProps {
+interface SideNavButtonProps {
   icon: IconProp;
-  text: string;
   active?: boolean;
   disabled?: boolean;
+  text?: string;
 }
 
-export const NavButton: React.FC<NavButtonProps> = (props) => {
-  const { icon, text, active, disabled } = props;
+export const SideNavButton: React.FC<SideNavButtonProps> = (props) => {
+  const { icon, active, disabled, text } = props;
 
   return (
     <button
       className={cn(
-        styles.navButton,
+        styles.iconButton,
         { [styles.active]: active },
         { [styles.disabled]: disabled }
       )}
     >
       <FontAwesomeIcon className={styles.icon} icon={icon} />
-      <p>{text}</p>
+      {text && <p>{text}</p>}
     </button>
   );
 };
